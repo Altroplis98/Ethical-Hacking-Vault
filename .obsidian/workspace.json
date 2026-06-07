@@ -1,0 +1,225 @@
+{
+  "main": {
+    "id": "c6652a2d879abdd6",
+    "type": "split",
+    "children": [
+      {
+        "id": "31a915ba388f1720",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "efa0fd4789f24a6f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "06 - Gaining Access/07 - John the Ripper Core.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "07 - John the Ripper Core"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "3e22b2e9e80862e7",
+    "type": "split",
+    "children": [
+      {
+        "id": "bac7956026799074",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c6781321371bc531",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "c6904e731faff13b",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "2john",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "17e2f52e2d9a34d2",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "ea59ab5a6c309979",
+    "type": "split",
+    "children": [
+      {
+        "id": "7c5faa8e665d8db2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a9df98587fd0e006",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "02 - Reconnaissance and OSINT/15 - Shodan.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 15 - Shodan"
+            }
+          },
+          {
+            "id": "fed40161c0aafbfa",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "02 - Reconnaissance and OSINT/15 - Shodan.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 15 - Shodan"
+            }
+          },
+          {
+            "id": "7d4bd82e3c311e5e",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "2dbac89f0a2a2dbd",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "4cccaf744c671a0c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "02 - Reconnaissance and OSINT/15 - Shodan.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 15 - Shodan"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "efa0fd4789f24a6f",
+  "lastOpenFiles": [
+    "09 - Service Cheatsheets/02 - SSH (22).md",
+    "06 - Gaining Access/09 - msfvenom Payload Cookbook.md",
+    "12 - HTB Workflows/08 - Windows Easy Pattern.md.tmp.38564.33221a22691b",
+    "07 - Post-Exploitation/Windows/15.5 - MSF Local Exploit Suggester.md",
+    "06 - Gaining Access/08 - Metasploit Framework Workflow.md.tmp.38564.f72556383272",
+    "06 - Gaining Access/08 - Metasploit Framework Workflow.md",
+    "06 - Gaining Access/29 - SQLMap.md",
+    "12 - HTB Workflows/10 - Web-Heavy Box Pattern.md",
+    "12 - HTB Workflows/01 - When You See X Do Y.md",
+    "06 - Gaining Access/07 - John the Ripper Core.md",
+    "06 - Gaining Access/Hashcat/06 - Hashcat Core.md",
+    "06 - Gaining Access/Hashcat/20 - Hashcat Mode IDs.md",
+    "11 - Shells Transfer Hashes/00 - README.md",
+    "00 - Vault Index.md",
+    "00 - USE ME.md",
+    "11 - Shells Transfer Hashes/19 - FTP Client Commands.md",
+    "09 - Service Cheatsheets/01 - FTP (21).md",
+    "11 - Shells Transfer Hashes/07 - Stabilizing PowerShell Shells.md",
+    "06 - Gaining Access/10 - Searchsploit to Working Exploit.md",
+    "06 - Gaining Access/04 - NetExec Password Attacks.md",
+    "04 - Enumeration/04 - rpcclient.md",
+    "04 - Enumeration/16 - snmpwalk.md",
+    "04 - Enumeration/03 - smbmap.md",
+    "04 - Enumeration/02 - smbclient.md",
+    "07 - Post-Exploitation/Windows/16 - Windows Manual Enumeration.md",
+    "06 - Gaining Access/Hashcat/23 - Hashcat Rules.md",
+    "06 - Gaining Access/Hashcat/22 - Hashcat Masks.md",
+    "Windows Attack Map.md",
+    "06 - Gaining Access/Hashcat",
+    "09 - Service Cheatsheets/00 - README.md.tmp.48888.a1baea8c1c70",
+    "00 - USE ME.md.tmp.24632.1aa773d24370",
+    "Windows Attack Map.md.tmp.24632.156f2299969a",
+    "12 - HTB Workflows/14 - Machine Fingerprinting by Port Combos.md.tmp.43136.90d3d52f9822",
+    "07 - Post-Exploitation/Windows",
+    "07 - Post-Exploitation/Linux"
+  ]
+}
