@@ -17,6 +17,9 @@ Quick-reference table for the most common hashcat `-m` mode numbers.
 | 1800 | sha512crypt `$6$` (Linux shadow) |
 | 7400 | sha256crypt `$5$` |
 | 3200 | bcrypt `$2*$` |
+| 1500 | DES (descrypt) — older Unix `/etc/passwd` |
+| 6300 | AIX `{smd5}` |
+| 1100 | Domain Cached Credentials v1 (DCC1) |
 
 ## Windows
 
@@ -30,6 +33,9 @@ Quick-reference table for the most common hashcat `-m` mode numbers.
 | 18200 | AS-REP Roast (etype 23) |
 | 19600 | Kerberos 5 TGS-REP etype 17 (AES128) |
 | 19700 | Kerberos 5 TGS-REP etype 18 (AES256) |
+| 2100 | DCC2 / mscash2 (domain cached credentials — offline domain machines) |
+| 26500 | Kerberos 5 AS-REQ Pre-Auth etype 23 (kerbrute output) |
+| 22100 | BitLocker |
 
 ## Web / Application
 
@@ -44,6 +50,10 @@ Quick-reference table for the most common hashcat `-m` mode numbers.
 | 3200 | bcrypt |
 | 400 | phpass (WordPress, phpBB) |
 | 7900 | Drupal7 |
+| 3710 | md5($salt.md5($pass)) — common custom web apps |
+| 10000 | Django PBKDF2-SHA256 |
+| 1711 | SSHA-512 (LDAP) |
+| 10900 | PBKDF2-HMAC-SHA256 (generic) |
 
 ## Network / Wireless
 
@@ -72,8 +82,22 @@ Quick-reference table for the most common hashcat `-m` mode numbers.
 | 13000 | RAR5 |
 | 12500 | RAR3 |
 | 11600 | 7-Zip |
-| 9400-9600 | MS Office |
+| 9400 | MS Office 2007 (`$office$*2007*`) |
+| 9500 | MS Office 2010 (`$office$*2010*`) |
+| 9600 | MS Office 2013/2016/2019/365 (`$office$*2013*`) — very slow (100k PBKDF2 iterations) |
+| 10400 | PDF 1.1–1.3 |
+| 10500 | PDF 1.4–1.6 |
+| 13400 | KeePass 1/2 |
+| 16900 | Ansible Vault |
+| 15500 | JKS (Java Keystore) |
 | 15300 | DPAPI masterkey v1 |
+
+## Mobile / Misc
+
+| Mode | Hash type |
+| --- | --- |
+| 8800 | Android FDE (Samsung) |
+| 11300 | Bitcoin/Litecoin wallet |
 
 > [!tip] Find the right mode
 > ```bash

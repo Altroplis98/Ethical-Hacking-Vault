@@ -35,7 +35,11 @@ The discipline of "one (or few) password(s) against many users." The right way t
    ```
 
 3. **Pick the right candidate passwords**.
+https://github.com/ihebski/DefaultCreds-cheat-sheet
+pip3 install defaultcreds-cheat-sheet
+creds search query
 
+https://www.softwaretestinghelp.com/default-router-username-and-password-list/
 ## Candidate password list (try in this order)
 
 ```text

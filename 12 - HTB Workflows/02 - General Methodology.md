@@ -9,6 +9,7 @@ The universal flow for every HTB / lab / OSCP-style box.
 [[00 - README|Folder index]] · [[01 - When You See X Do Y|X→Y cheat card]]
 
 ## The flow
+git clone https://github.com/Altroplis98/first-scripts.git
 
 ```text
 ┌─────────────────────────────────────────────────────────────────┐

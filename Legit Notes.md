@@ -1,0 +1,1 @@
+https://github.com/daniellowrie/Nmap-Like-A-Red-Teamer/blob/main/Using_Nmap_Like_a_Red_Team_Operator-show-notes.pdf

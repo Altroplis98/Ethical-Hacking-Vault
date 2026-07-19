@@ -75,7 +75,80 @@ port:9200 "elasticsearch" org:"Example Inc"
 
 # Jenkins without auth
 "X-Jenkins" "Set-Cookie: JSESSIONID" http.title:"Dashboard"
+
+# Cameras
+title:"webcamXP" country:"US"
+product:"Hikvision IP Camera"
+"Server: IP Camera" org:"Comcast"
+
+# Routers / default creds
+"Default Password" product:"MikroTik"
+title:"RouterOS" port:80
+"D-Link" "200 OK" port:8080
+
+# Industrial / ICS / IoT
+port:502 "Modbus"
+port:47808 "BACnet"
+"SIMATIC" port:102
+
+# Printers
+"@PJL INFO" port:9100
+title:"Printer Status" port:80
+
+# Admin panels
+http.title:"Admin Panel"
+http.title:"pfSense" port:443
+http.title:"Untangle" port:443
+
+# Exposed databases
+port:27017 product:"MongoDB" -authentication
+port:6379 "redis_version" -auth
+
+# VPNs / remote access
+"Cisco ASA" port:443
+"Pulse Secure" port:443
+title:"SSL VPN" port:4433
+
+# Targeted org recon
+org:"Target" port:22
+org:"Target" http.title:"Login"
+org:"Target" ssl.cert.subject.cn:"targetdomain.com"
 ```
+
+## OSINT recon workflow (org targeting)
+
+```text
+# 1. Find what an org has exposed
+org:"Company Name"
+
+# 2. Narrow to interesting services
+org:"Company Name" port:443
+org:"Company Name" http.title:"Login"
+org:"Company Name" product:"Cisco"
+
+# 3. Check for known vulns (paid)
+org:"Company Name" vuln:CVE-2021-44228
+
+# 4. Find subdomains via SSL certs
+ssl.cert.subject.cn:"*.example.com"
+ssl.cert.subject.cn:"example.com"
+
+# 5. Find dev/staging environments
+hostname:"dev.example.com" OR hostname:"staging.example.com"
+
+# 6. Pivot on ASN (more accurate than org name)
+# Find ASN first: https://bgp.he.net → search company name
+asn:AS12345
+```
+
+## Tips
+
+- `org:` uses Shodan's own org tagging — try variations if no results ("Example Inc", "Example", "Example LLC")
+- `net:` is more reliable than `org:` if you know the IP range — pull it from whois or bgp.he.net
+- Combine filters with spaces (AND) — no native OR, use two separate searches
+- `has_screenshot:true` combined with `title:` is fast for finding exposed web UIs visually
+- `vuln:` filter is paid-only — free alternative: cross-ref version numbers manually against NVD
+- Shodan indexes at crawl time — results may be weeks old, always verify with a live scan
 
 ## API usage (Python)
 

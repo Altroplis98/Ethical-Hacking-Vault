@@ -69,14 +69,23 @@ john --wordlist=rockyou.txt pdf.hash
 # Extract hash
 office2john document.docx > office.hash
 
-# Crack
-john --wordlist=rockyou.txt office.hash
+# IMPORTANT: office2john prepends the filename (e.g. "document.docx:$office$*...")
+# Hashcat rejects this with "Signature unmatched" — strip the prefix first:
+sed 's/.*://' office.hash > office_clean.hash
+cat office_clean.hash   # verify it starts with $office$*
 
-# Hashcat modes:
-# Office 2007 = -m 9400
-# Office 2010 = -m 9500
-# Office 2013+ = -m 9600
-hashcat -m 9600 office.hash rockyou.txt
+# Identify the version from the hash prefix:
+# $office$*2007* → -m 9400
+# $office$*2010* → -m 9500
+# $office$*2013* → -m 9600  (also covers 2016/2019/365 — all use same scheme)
+# Note: mode 9600 is very slow (~1-2k H/s on CPU) due to 100k PBKDF2 iterations
+
+# Crack with hashcat
+hashcat -m 9600 office_clean.hash /usr/share/wordlists/rockyou.txt
+hashcat -m 9600 office_clean.hash /usr/share/wordlists/rockyou.txt -r /usr/share/hashcat/rules/best64.rule
+
+# Crack with John (handles the filename prefix automatically — no cleanup needed)
+john --wordlist=/usr/share/wordlists/rockyou.txt office.hash
 ```
 
 ## KeePass

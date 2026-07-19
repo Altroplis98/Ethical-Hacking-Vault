@@ -48,6 +48,26 @@ The most-referenced file in this vault. Open this every time you find something 
 | `IPC$` accessible with `''` `''` | Null session works → `rpcclient -U "" -N ip` → `enumdomusers`. |
 | Windows 7 / Server 2008 R2 / fresh | Try MS17-010 EternalBlue. `nmap --script smb-vuln-ms17-010 -p445 ip`. |
 
+## Mail (SMTP 25 · POP3 110/995 · IMAP 143/993)
+
+> [!important] The mental model that unsticks you
+> Mail isn't like web. On a web box the service **is** the attack surface. On a mail box the ports split into two jobs: **SMTP (25) is for ENUMERATION** (harvest valid usernames), and **POP3/IMAP (110/143) are a CREDENTIAL PAYOFF** — you rarely exploit them directly. You get creds *elsewhere* (cracked hash, config file, password reuse), then **log into the mailbox and READ it** for the next secret: passwords, reset links, internal hosts, or the flag itself. So: SMTP → get names. POP3/IMAP → get in and read mail.
+
+| When you see... | Do / think... |
+| --- | --- |
+| SMTP 25 open | Enumerate usernames: `smtp-user-enum -M RCPT -U users.txt -D target.htb -t ip`. Also `-M VRFY` and `-M EXPN`. Harvested names → password-spray *everything* else. |
+| SMTP banner / `nmap` smtp-commands | `nmap -p25 --script smtp-commands,smtp-enum-users,smtp-open-relay ip`. VRFY/EXPN enabled = free user enum. |
+| Open relay (`smtp-open-relay` hit) | You can send mail as anyone → phishing / spoofing internal users. Rarely the flag, but note it. |
+| POP3 110 or IMAP 143 open, **no creds yet** | Not the vector by itself. Go find creds first (crack a hash, read a config, reuse a password). Come back here to READ mail once you have a login. |
+| You now HAVE a user + password | **Log in and read the inbox** — this is where the payoff lives. Use the curl/nc one-liners below. |
+| POP3 login (plaintext 110) | `nc ip 110` → `USER bob` → `PASS pass` → `LIST` (count msgs) → `RETR 1` (read msg 1). |
+| IMAP login (plaintext 143) | `nc ip 143` → `a LOGIN bob pass` → `a LIST "" "*"` (folders) → `a SELECT INBOX` → `a FETCH 1 BODY[TEXT]`. |
+| Encrypted variant (POP3S 995 / IMAPS 993) | Same commands, but wrap in TLS: `openssl s_client -connect ip:993` (IMAP) or `:995` (POP3). |
+| Just want the mail fast (any creds) | curl does it clean: `curl -k 'imaps://ip' --user bob:pass` (list) then `curl -k 'imaps://ip/INBOX;UID=1' --user bob:pass` (read). POP3: `curl 'pop3://ip' --user bob:pass` then `curl 'pop3://ip/1' --user bob:pass`. |
+| No creds anywhere and mail is clearly the path | Brute it: `hydra -L users.txt -P rockyou.txt ip pop3` (or `imap`). Only after you've harvested names from SMTP. |
+| Mailbox references a subdomain / internal host | Add to `/etc/hosts`, then re-scan / browse it. Mail bodies leak infra constantly. |
+| Webmail app on 80/443 (Roundcube, SquirrelMail, Zimbra) | Now it IS a web target — version → `searchsploit`. Reuse any mailbox creds on the webmail login. |
+
 ## Web (80/443)
 
 | When you see... | Do / think... |

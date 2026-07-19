@@ -63,7 +63,12 @@ gpg2john private.gpg > gpg.hash        # GPG passphrase
 
 # Then crack:
 john --wordlist=rockyou.txt zip.hash
+
+AlexAviles@htb[/htb]$ bitlocker2john -i Backup.vhd > backup.hashes
+AlexAviles@htb[/htb]$ grep "bitlocker\$0" backup.hashes > backup.hash
+AlexAviles@htb[/htb]$ cat backup.hash
 ```
+
 
 ## Rules
 

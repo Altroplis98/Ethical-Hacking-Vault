@@ -4,24 +4,81 @@
     "type": "split",
     "children": [
       {
-        "id": "31a915ba388f1720",
+        "id": "1b61a349ab6da0db",
         "type": "tabs",
         "children": [
           {
-            "id": "efa0fd4789f24a6f",
+            "id": "1dfc47f28d8f2916",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "06 - Gaining Access/07 - John the Ripper Core.md",
+                "file": "09 - Service Cheatsheets/07 - POP3 (110).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "07 - John the Ripper Core"
+              "title": "07 - POP3 (110)"
+            }
+          },
+          {
+            "id": "00fa042b7d036037",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "04 - Enumeration/22 - smtp-user-enum.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "22 - smtp-user-enum"
+            }
+          },
+          {
+            "id": "9d806f222e008ba7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "09 - Service Cheatsheets/04 - SMTP (25 465 587).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "04 - SMTP (25 465 587)"
+            }
+          },
+          {
+            "id": "0323502c83b51880",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "09 - Service Cheatsheets/04 - SMTP (25 465 587).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "04 - SMTP (25 465 587)"
+            }
+          },
+          {
+            "id": "d7801b619abd27ad",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "12 - HTB Workflows/01 - When You See X Do Y.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "01 - When You See X Do Y"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -53,7 +110,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "2john",
+                "query": "tag:email",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,8 +131,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -184,42 +240,43 @@
       "bases:Create new base": false
     }
   },
-  "active": "efa0fd4789f24a6f",
+  "active": "d7801b619abd27ad",
   "lastOpenFiles": [
-    "09 - Service Cheatsheets/02 - SSH (22).md",
-    "06 - Gaining Access/09 - msfvenom Payload Cookbook.md",
-    "12 - HTB Workflows/08 - Windows Easy Pattern.md.tmp.38564.33221a22691b",
-    "07 - Post-Exploitation/Windows/15.5 - MSF Local Exploit Suggester.md",
-    "06 - Gaining Access/08 - Metasploit Framework Workflow.md.tmp.38564.f72556383272",
-    "06 - Gaining Access/08 - Metasploit Framework Workflow.md",
-    "06 - Gaining Access/29 - SQLMap.md",
-    "12 - HTB Workflows/10 - Web-Heavy Box Pattern.md",
-    "12 - HTB Workflows/01 - When You See X Do Y.md",
-    "06 - Gaining Access/07 - John the Ripper Core.md",
-    "06 - Gaining Access/Hashcat/06 - Hashcat Core.md",
-    "06 - Gaining Access/Hashcat/20 - Hashcat Mode IDs.md",
-    "11 - Shells Transfer Hashes/00 - README.md",
-    "00 - Vault Index.md",
-    "00 - USE ME.md",
-    "11 - Shells Transfer Hashes/19 - FTP Client Commands.md",
-    "09 - Service Cheatsheets/01 - FTP (21).md",
-    "11 - Shells Transfer Hashes/07 - Stabilizing PowerShell Shells.md",
-    "06 - Gaining Access/10 - Searchsploit to Working Exploit.md",
-    "06 - Gaining Access/04 - NetExec Password Attacks.md",
+    "09 - Service Cheatsheets/08 - IMAP (143 993).md",
+    "02 - Reconnaissance and OSINT/10 - theHarvester.md",
+    "09 - Service Cheatsheets/04 - SMTP (25 465 587).md",
+    "04 - Enumeration/22 - smtp-user-enum.md",
+    "04 - Enumeration/23 - swaks.md",
+    "09 - Service Cheatsheets/07 - POP3 (110).md",
+    "02 - Reconnaissance and OSINT/02 - DNS Recon Basics.md",
+    "09 - Service Cheatsheets/05 - DNS (53).md",
     "04 - Enumeration/04 - rpcclient.md",
-    "04 - Enumeration/16 - snmpwalk.md",
     "04 - Enumeration/03 - smbmap.md",
+    "04 - Enumeration/01 - enum4linux and enum4linux-ng.md",
+    "09 - Service Cheatsheets/11 - SMB (445 139).md",
     "04 - Enumeration/02 - smbclient.md",
-    "07 - Post-Exploitation/Windows/16 - Windows Manual Enumeration.md",
-    "06 - Gaining Access/Hashcat/23 - Hashcat Rules.md",
-    "06 - Gaining Access/Hashcat/22 - Hashcat Masks.md",
-    "Windows Attack Map.md",
+    "12 - HTB Workflows/10 - Web-Heavy Box Pattern.md",
+    "09 - Service Cheatsheets/06 - HTTP HTTPS.md",
+    "12 - HTB Workflows/14 - Machine Fingerprinting by Port Combos.md",
+    "12 - HTB Workflows/08 - Windows Easy Pattern.md",
+    "01 - Pre-Engagement/07 - Communications Plan.md",
+    "12 - HTB Workflows/02 - General Methodology.md",
+    "12 - HTB Workflows/01 - When You See X Do Y.md",
+    "04 - Enumeration/24 - Gobuster.md",
+    "03 - Scanning/17 - wafw00f.md",
+    "03 - Scanning/16 - WhatWeb.md",
+    "Legit Notes.md",
+    "07 - Post-Exploitation/Windows/37.5 - Session Hijacking (RDP tscon).md",
+    "09 - Service Cheatsheets/17 - RDP (3389).md",
+    "07 - Post-Exploitation/Linux/00 - README.md.tmp.35988.7419dff43b98",
+    "07 - Post-Exploitation/Windows/37.5 - Session Hijacking (RDP tscon).md.tmp.35988.e1352d2bf518",
+    "09 - Service Cheatsheets/13 - MSSQL (1433).md.tmp.28032.a6ac7a9b8e2e",
+    "Untitled",
+    "02 - Reconnaissance and OSINT/15 - Shodan.md.tmp.41640.7c26fe5b18f5",
+    "12 - HTB Workflows/08 - Windows Easy Pattern.md.tmp.38564.33221a22691b",
+    "06 - Gaining Access/08 - Metasploit Framework Workflow.md.tmp.38564.f72556383272",
     "06 - Gaining Access/Hashcat",
     "09 - Service Cheatsheets/00 - README.md.tmp.48888.a1baea8c1c70",
-    "00 - USE ME.md.tmp.24632.1aa773d24370",
-    "Windows Attack Map.md.tmp.24632.156f2299969a",
-    "12 - HTB Workflows/14 - Machine Fingerprinting by Port Combos.md.tmp.43136.90d3d52f9822",
-    "07 - Post-Exploitation/Windows",
-    "07 - Post-Exploitation/Linux"
+    "00 - USE ME.md.tmp.24632.1aa773d24370"
   ]
 }
